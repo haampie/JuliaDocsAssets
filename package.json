@@ -1,0 +1,19 @@
+{
+  "name": "juliadocsbootstrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "brunch": "^2.10.12",
+    "sass-brunch": "^2.10.4",
+    "uglify-js-brunch": "^2.10.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.3"
+  }
+}
