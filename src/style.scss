@@ -77,18 +77,28 @@ pre > code {
   & > p, & > h1, & > h2, & > ul {
     position: relative;
 
-    &:hover > .anchor {
-      display: block;
+    @include media-breakpoint-up(md) {
+      &:hover > .anchor {
+        display: block;
+      }
     }
 
     @include media-breakpoint-up(md) {
       margin-right: 20%;
+      padding-left: map-get($spacers, 4);
     }
-
-    padding-left: map-get($spacers, 4);
   }
 
   & > .highlight {
+
+
+    @include media-breakpoint-down(md) {
+      margin-left: -$grid-gutter-width;
+      margin-right: -$grid-gutter-width;
+      padding-left: $grid-gutter-width;
+      padding-right: $grid-gutter-width;
+    }
+
     &:hover >.anchor {
       display: block;
     }
@@ -101,7 +111,12 @@ pre > code {
 }
 
 .highlight {
-  padding: map-get($spacers, 4);
+  @include media-breakpoint-up(md) {
+    padding: map-get($spacers, 4);
+  }
+  @include media-breakpoint-down(md) {
+    padding: $spacer;
+  }
   background: rgba(0, 0, 0, .05);
   margin-top: $spacer;
   margin-bottom: $spacer;
@@ -147,7 +162,8 @@ pre > code {
   }
 
   &.anchor-r {
-    float: right;
+    position: absolute;
+    right: 2*$spacer;
   }
 }
 
