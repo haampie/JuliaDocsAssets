@@ -95,6 +95,48 @@ julia&gt; x = "Hello World!"
           Julia provides an extremely flexible system for naming variables. Variable names are case-sensitive, and have no semantic meaning (that is, the language will not treat variables differently based on their names).
         </p>
 
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead class="thead-light">
+              <tr>
+                <th><code>which</code></th>
+                <th>type of eigenvalues</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>:LM</code></td>
+                <td>eigenvalues of largest magnitude (default)</td>
+              </tr>
+              <tr>
+                <td><code>:SM</code></td>
+                <td>eigenvalues of smallest magnitude</td>
+              </tr>
+              <tr>
+                <td><code>:LR</code></td>
+                <td>eigenvalues of largest real part</td>
+              </tr>
+              <tr>
+                <td><code>:SR</code></td>
+                <td>eigenvalues of smallest real part</td>
+              </tr>
+              <tr>
+                <td><code>:LI</code></td>
+                <td>eigenvalues of largest imaginary part (nonsymmetric or complex <code>A</code> only)</td>
+              </tr>
+              <tr>
+                <td><code>:SI</code></td>
+                <td>eigenvalues of smallest imaginary part (nonsymmetric or complex <code>A</code> only)</td>
+              </tr>
+              <tr>
+                <td><code>:BE</code></td>
+                <td>compute half of the eigenvalues from each end of the spectrum, biased in favor of the high end. (real symmetric <code>A</code> only)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
         <div class="highlight" id="c1">
           <a href="#c1" class="anchor anchor-r"></a>
           <pre><code class="language-julia-repl">julia&gt; x = 1.0
@@ -176,6 +218,9 @@ WARNING: imported binding for sqrt overwritten in module Main
           <a href="#p6" class="anchor anchor-l"></a>
           Operators like <code>+</code> are also valid identifiers, but are parsed specially. In some contexts, operators can be used just like variables; for example <code>(+)</code> refers to the addition function, and <code>(+) = f</code> will reassign it. Most of the Unicode infix operators (in category Sm), such as <code>⊕</code>, are parsed as infix operators and are available for user-defined methods (e.g. you can use <code>const ⊗ = kron</code> to define <code>⊗</code> as an infix Kronecker product).
         </p>
+
+        <div class="table-responsive">
+        <table class="table table-bordered"><thead><tr><th>Matrix type</th><th><code>+</code></th><th><code>-</code></th><th><code>*</code></th><th><code>\</code></th><th>Other functions with optimized methods</th></tr></thead><tbody><tr><td><a href="../../stdlib/linalg/#Base.LinAlg.Hermitian"><code>Hermitian</code></a></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>MV</td><td><a href="../../stdlib/linalg/#Base.inv"><code>inv()</code></a>, <a href="../../stdlib/linalg/#Base.LinAlg.sqrtm"><code>sqrtm()</code></a>, <a href="../../stdlib/linalg/#Base.LinAlg.expm"><code>expm()</code></a></td></tr><tr><td><a href="../../stdlib/linalg/#Base.LinAlg.UpperTriangular"><code>UpperTriangular</code></a></td><td>&nbsp;</td><td>&nbsp;</td><td>MV</td><td>MV</td><td><a href="../../stdlib/linalg/#Base.inv"><code>inv()</code></a>, <a href="../../stdlib/linalg/#Base.LinAlg.det"><code>det()</code></a></td></tr><tr><td><a href="../../stdlib/linalg/#Base.LinAlg.LowerTriangular"><code>LowerTriangular</code></a></td><td>&nbsp;</td><td>&nbsp;</td><td>MV</td><td>MV</td><td><a href="../../stdlib/linalg/#Base.inv"><code>inv()</code></a>, <a href="../../stdlib/linalg/#Base.LinAlg.det"><code>det()</code></a></td></tr><tr><td><a href="../../stdlib/linalg/#Base.LinAlg.SymTridiagonal"><code>SymTridiagonal</code></a></td><td>M</td><td>M</td><td>MS</td><td>MV</td><td><a href="../../stdlib/linalg/#Base.LinAlg.eigmax"><code>eigmax()</code></a>, <a href="../../stdlib/linalg/#Base.LinAlg.eigmin"><code>eigmin()</code></a></td></tr><tr><td><a href="../../stdlib/linalg/#Base.LinAlg.Tridiagonal"><code>Tridiagonal</code></a></td><td>M</td><td>M</td><td>MS</td><td>MV</td><td>&nbsp;</td></tr><tr><td><a href="../../stdlib/linalg/#Base.LinAlg.Bidiagonal"><code>Bidiagonal</code></a></td><td>M</td><td>M</td><td>MS</td><td>MV</td><td>&nbsp;</td></tr><tr><td><a href="../../stdlib/linalg/#Base.LinAlg.Diagonal"><code>Diagonal</code></a></td><td>M</td><td>M</td><td>MV</td><td>MV</td><td><a href="../../stdlib/linalg/#Base.inv"><code>inv()</code></a>, <a href="../../stdlib/linalg/#Base.LinAlg.det"><code>det()</code></a>, <a href="../../stdlib/linalg/#Base.LinAlg.logdet"><code>logdet()</code></a>, <a href="../../stdlib/math/#Base.:/"><code>/()</code></a></td></tr><tr><td><code>UniformScaling</code></td><td>M</td><td>M</td><td>MVS</td><td>MVS</td><td><a href="../../stdlib/math/#Base.:/"><code>/()</code></a></td></tr></tbody></table></div>
         
         <p id="p7">
           <a href="#p7" class="anchor anchor-l"></a>
