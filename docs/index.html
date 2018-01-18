@@ -12,19 +12,25 @@
   <div class="container-fluid">
     <div class="row flex-xl-nowrap">
       <article class="main article order-1 col-12 col-md-9 col-xl-8">
+
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Manual</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Variables</li>
+          </ol>
+        </nav>
         <h1 id="variables">
-          <a href="#variables" class="anchor anchor-l"></a>
+          <a href="#variables" class="anchor"></a>
           Variables
         </h1>
         
         <p id="p0">
-          <a href="#p0" class="anchor anchor-l"></a>
+          <a href="#p0" class="anchor"></a>
           A variable, in Julia, is a name associated (or bound) to a value. It's useful when you want to store a value (that you obtained after some math, for example) for later use. For example:
         </p>
 
         <div id="c0" class="highlight">
-          <a href="#c0" class="anchor anchor-r"></a>
-          <pre><code class="language-julia-repl"># Assign the value 10 to the variable x
+          <pre><a href="#c0" class="anchor"></a><code class="language-julia-repl"># Assign the value 10 to the variable x
 julia&gt; x = 10
 10
 
@@ -43,7 +49,10 @@ julia&gt; x = "Hello World!"
 
         <section class="card docstring">
           <div class="card-body">
-            <p class="card-title h5"><a class="docstring-binding" id="docstring-1" href="#docstring-1"><code>Base.:*</code></a> <small class="text-muted docstring-category">Method</small></p>
+            <p class="card-title h5">
+              <a class="docstring-binding" id="docstring-1" href="#docstring-1"><code>Base.:*</code></a>
+              <small class="text-muted docstring-category">Method</small>
+            </p>
             <div class="highlight"><pre><code>*(x, y...)</code></pre></div>
             <p>Multiplication operator. <code>x*y*z*...</code> calls this function with all arguments, i.e. <code>*(x, y, z, ...)</code>.</p>
             <a class="card-link" href="#">source</a>
@@ -91,12 +100,12 @@ julia&gt; x = "Hello World!"
         </section>
 
         <p id="p1">
-          <a href="#p1" class="anchor anchor-l"></a>
+          <a href="#p1" class="anchor"></a>
           Julia provides an extremely flexible system for naming variables. Variable names are case-sensitive, and have no semantic meaning (that is, the language will not treat variables differently based on their names).
         </p>
 
         <div class="table-responsive">
-          <table class="table table-hover">
+          <table class="table table-bordered">
             <thead class="thead-light">
               <tr>
                 <th><code>which</code></th>
@@ -138,8 +147,7 @@ julia&gt; x = "Hello World!"
         </div>
 
         <div class="highlight" id="c1">
-          <a href="#c1" class="anchor anchor-r"></a>
-          <pre><code class="language-julia-repl">julia&gt; x = 1.0
+          <pre><a href="#c1" class="anchor"></a><code class="language-julia-repl">julia&gt; x = 1.0
 1.0
 
 julia&gt; y = -3
@@ -156,13 +164,12 @@ julia&gt; UniversalDeclarationOfHumanRightsStart = "人人生而自由，在尊�
       </div>
 
       <p id="p2">
-        <a href="#p2" class="anchor anchor-l"></a>
+        <a href="#p2" class="anchor"></a>
         Unicode names (in UTF-8 encoding) are allowed:
       </p>
 
       <div id="c2" class="highlight">
-        <a href="#c2" class="anchor anchor-r"></a>
-        <pre><code class="language-julia-repl">julia&gt; δ = 0.00001
+        <pre><a href="#c2" class="anchor"></a><code class="language-julia-repl">julia&gt; δ = 0.00001
 1.0e-5
 
 julia&gt; 안녕하세요 = "Hello"
@@ -170,18 +177,17 @@ julia&gt; 안녕하세요 = "Hello"
         </div>
 
         <p id="p3">
-          <a href="#p3" class="anchor anchor-l"></a>
+          <a href="#p3" class="anchor"></a>
           In the Julia REPL and several other Julia editing environments, you can type many Unicode math symbols by typing the backslashed LaTeX symbol name followed by tab. For example, the variable name <code>δ</code> can be entered by typing <code>\delta</code>-<em>tab</em>, or even <code>α̂₂</code> by <code>\alpha</code>-<em>tab</em>-<code>\hat</code>- <em>tab</em>-<code>\_2</code>-<em>tab</em>. (If you find a symbol somewhere, e.g. in someone else's code, that you don't know how to type, the REPL help will tell you: just type <code>?</code> and then paste the symbol.)
         </p>
 
         <p id="p4">
-          <a href="#p4" class="anchor anchor-l"></a>
+          <a href="#p4" class="anchor"></a>
           Julia will even let you redefine built-in constants and functions if needed:
         </p>
 
         <div id="c3" class="highlight">
-          <a href="#c3" class="anchor anchor-r"></a>
-          <pre><code class="language-julia-repl">julia&gt; pi
+          <pre><a href="#c3" class="anchor"></a><code class="language-julia-repl">julia&gt; pi
 π = 3.1415926535897...
 
 julia&gt; pi = 3
@@ -200,36 +206,113 @@ WARNING: imported binding for sqrt overwritten in module Main
         </div>
 
         <p id="p4">
-          <a href="#p4" class="anchor anchor-l"></a>
+          <a href="#p4" class="anchor"></a>
           However, this is obviously not recommended to avoid potential confusion.
         </p>
 
         <h2 id="allowed-variable-names">
-          <a href="#allowed-variable-names" class="anchor anchor-l"></a>
+          <a href="#allowed-variable-names" class="anchor"></a>
           Allowed Variable Names
         </h2>
         
         <p id="p5">
-          <a href="#p5" class="anchor anchor-l"></a>
+          <a href="#p5" class="anchor"></a>
           Variable names must begin with a letter (A-Z or a-z), underscore, or a subset of Unicode code points greater than 00A0; in particular, <a href="http://www.fileformat.info/info/unicode/category/index.htm">Unicode character categories</a> Lu/Ll/Lt/Lm/Lo/Nl (letters), Sc/So (currency and other symbols), and a few other letter-like characters (e.g. a subset of the Sm math symbols) are allowed. Subsequent characters may also include ! and digits (0-9 and other characters in categories Nd/No), as well as other Unicode code points: diacritics and other modifying marks (categories Mn/Mc/Me/Sk), some punctuation connectors (category Pc), primes, and a few other characters.
         </p>
         
         <p id="p6">
-          <a href="#p6" class="anchor anchor-l"></a>
+          <a href="#p6" class="anchor"></a>
           Operators like <code>+</code> are also valid identifiers, but are parsed specially. In some contexts, operators can be used just like variables; for example <code>(+)</code> refers to the addition function, and <code>(+) = f</code> will reassign it. Most of the Unicode infix operators (in category Sm), such as <code>⊕</code>, are parsed as infix operators and are available for user-defined methods (e.g. you can use <code>const ⊗ = kron</code> to define <code>⊗</code> as an infix Kronecker product).
         </p>
 
         <div class="table-responsive">
-        <table class="table table-bordered"><thead><tr><th>Matrix type</th><th><code>+</code></th><th><code>-</code></th><th><code>*</code></th><th><code>\</code></th><th>Other functions with optimized methods</th></tr></thead><tbody><tr><td><a href="../../stdlib/linalg/#Base.LinAlg.Hermitian"><code>Hermitian</code></a></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>MV</td><td><a href="../../stdlib/linalg/#Base.inv"><code>inv()</code></a>, <a href="../../stdlib/linalg/#Base.LinAlg.sqrtm"><code>sqrtm()</code></a>, <a href="../../stdlib/linalg/#Base.LinAlg.expm"><code>expm()</code></a></td></tr><tr><td><a href="../../stdlib/linalg/#Base.LinAlg.UpperTriangular"><code>UpperTriangular</code></a></td><td>&nbsp;</td><td>&nbsp;</td><td>MV</td><td>MV</td><td><a href="../../stdlib/linalg/#Base.inv"><code>inv()</code></a>, <a href="../../stdlib/linalg/#Base.LinAlg.det"><code>det()</code></a></td></tr><tr><td><a href="../../stdlib/linalg/#Base.LinAlg.LowerTriangular"><code>LowerTriangular</code></a></td><td>&nbsp;</td><td>&nbsp;</td><td>MV</td><td>MV</td><td><a href="../../stdlib/linalg/#Base.inv"><code>inv()</code></a>, <a href="../../stdlib/linalg/#Base.LinAlg.det"><code>det()</code></a></td></tr><tr><td><a href="../../stdlib/linalg/#Base.LinAlg.SymTridiagonal"><code>SymTridiagonal</code></a></td><td>M</td><td>M</td><td>MS</td><td>MV</td><td><a href="../../stdlib/linalg/#Base.LinAlg.eigmax"><code>eigmax()</code></a>, <a href="../../stdlib/linalg/#Base.LinAlg.eigmin"><code>eigmin()</code></a></td></tr><tr><td><a href="../../stdlib/linalg/#Base.LinAlg.Tridiagonal"><code>Tridiagonal</code></a></td><td>M</td><td>M</td><td>MS</td><td>MV</td><td>&nbsp;</td></tr><tr><td><a href="../../stdlib/linalg/#Base.LinAlg.Bidiagonal"><code>Bidiagonal</code></a></td><td>M</td><td>M</td><td>MS</td><td>MV</td><td>&nbsp;</td></tr><tr><td><a href="../../stdlib/linalg/#Base.LinAlg.Diagonal"><code>Diagonal</code></a></td><td>M</td><td>M</td><td>MV</td><td>MV</td><td><a href="../../stdlib/linalg/#Base.inv"><code>inv()</code></a>, <a href="../../stdlib/linalg/#Base.LinAlg.det"><code>det()</code></a>, <a href="../../stdlib/linalg/#Base.LinAlg.logdet"><code>logdet()</code></a>, <a href="../../stdlib/math/#Base.:/"><code>/()</code></a></td></tr><tr><td><code>UniformScaling</code></td><td>M</td><td>M</td><td>MVS</td><td>MVS</td><td><a href="../../stdlib/math/#Base.:/"><code>/()</code></a></td></tr></tbody></table></div>
+          <table class="table table-bordered">
+            <thead class="thead-light">
+              <tr>
+                <th>Matrix type</th>
+                <th><code>+</code></th>
+                <th><code>-</code></th>
+                <th><code>*</code></th>
+                <th><code>\</code></th>
+                <th>Other functions with optimized methods</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="../../stdlib/linalg/#Base.LinAlg.Hermitian"><code>Hermitian</code></a></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>MV</td>
+                <td><a href="../../stdlib/linalg/#Base.inv"><code>inv()</code></a>, <a href="../../stdlib/linalg/#Base.LinAlg.sqrtm"><code>sqrtm()</code></a>, <a href="../../stdlib/linalg/#Base.LinAlg.expm"><code>expm()</code></a></td>
+              </tr>
+              <tr>
+                <td><a href="../../stdlib/linalg/#Base.LinAlg.UpperTriangular"><code>UpperTriangular</code></a></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>MV</td>
+                <td>MV</td>
+                <td><a href="../../stdlib/linalg/#Base.inv"><code>inv()</code></a>, <a href="../../stdlib/linalg/#Base.LinAlg.det"><code>det()</code></a></td>
+              </tr>
+              <tr>
+                <td><a href="../../stdlib/linalg/#Base.LinAlg.LowerTriangular"><code>LowerTriangular</code></a></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>MV</td>
+                <td>MV</td>
+                <td><a href="../../stdlib/linalg/#Base.inv"><code>inv()</code></a>, <a href="../../stdlib/linalg/#Base.LinAlg.det"><code>det()</code></a></td>
+              </tr>
+              <tr>
+                <td><a href="../../stdlib/linalg/#Base.LinAlg.SymTridiagonal"><code>SymTridiagonal</code></a></td>
+                <td>M</td>
+                <td>M</td>
+                <td>MS</td>
+                <td>MV</td>
+                <td><a href="../../stdlib/linalg/#Base.LinAlg.eigmax"><code>eigmax()</code></a>, <a href="../../stdlib/linalg/#Base.LinAlg.eigmin"><code>eigmin()</code></a></td>
+              </tr>
+              <tr>
+                <td><a href="../../stdlib/linalg/#Base.LinAlg.Tridiagonal"><code>Tridiagonal</code></a></td>
+                <td>M</td>
+                <td>M</td>
+                <td>MS</td>
+                <td>MV</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td><a href="../../stdlib/linalg/#Base.LinAlg.Bidiagonal"><code>Bidiagonal</code></a></td>
+                <td>M</td>
+                <td>M</td>
+                <td>MS</td>
+                <td>MV</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td><a href="../../stdlib/linalg/#Base.LinAlg.Diagonal"><code>Diagonal</code></a></td>
+                <td>M</td>
+                <td>M</td>
+                <td>MV</td>
+                <td>MV</td>
+                <td><a href="../../stdlib/linalg/#Base.inv"><code>inv()</code></a>, <a href="../../stdlib/linalg/#Base.LinAlg.det"><code>det()</code></a>, <a href="../../stdlib/linalg/#Base.LinAlg.logdet"><code>logdet()</code></a>, <a href="../../stdlib/math/#Base.:/"><code>/()</code></a></td>
+              </tr>
+              <tr>
+                <td><code>UniformScaling</code></td>
+                <td>M</td>
+                <td>M</td>
+                <td>MVS</td>
+                <td>MVS</td>
+                <td><a href="../../stdlib/math/#Base.:/"><code>/()</code></a></td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
         
         <p id="p7">
-          <a href="#p7" class="anchor anchor-l"></a>
+          <a href="#p7" class="anchor"></a>
           The only explicitly disallowed names for variables are the names of built-in statements:
         </p>
 
         <div id="c4" class="highlight">
-          <a href="#c4" class="anchor anchor-r"></a>
-          <pre><code class="language-julia-repl">julia&gt; else = false
+          <pre><a href="#c4" class="anchor"></a><code class="language-julia-repl">julia&gt; else = false
 ERROR: syntax: unexpected "else"
 
 julia&gt; try = "No"
@@ -237,17 +320,17 @@ ERROR: syntax: unexpected "="</code></pre>
         </div>
 
         <p id="p8">
-          <a href="#p8" class="anchor anchor-l"></a>
+          <a href="#p8" class="anchor"></a>
           Some Unicode characters are considered to be equivalent in identifiers. Different ways of entering Unicode combining characters (e.g., accents) are treated as equivalent (specifically, Julia identifiers are NFC-normalized). The Unicode characters <code>ɛ</code> (U+025B: Latin small letter open e) and <code>µ</code> (U+00B5: micro sign) are treated as equivalent to the corresponding Greek letters, because the former are easily accessible via some input methods.
         </p>
 
         <h2 id="stylistic-conventions">
-            <a href="#stylistic-conventions" class="anchor anchor-l"></a>
+            <a href="#stylistic-conventions" class="anchor"></a>
             Stylistic Conventions
         </h2>
 
         <p id="p9">
-          <a href="#p9" class="anchor anchor-l"></a>
+          <a href="#p9" class="anchor"></a>
           While Julia imposes few restrictions on valid names, it has become useful to adopt the following conventions:
         </p>
       
@@ -269,6 +352,13 @@ ERROR: syntax: unexpected "="</code></pre>
           </li>
         </ul>
         <p>For more information about stylistic conventions, see the <a href="#">Style Guide</a>.</p>
+        
+        <footer>
+          <hr>
+          <a class="prev" href="../getting-started/">Previous: Getting Started</a>
+          <a class="next" href="../integers-and-floating-point-numbers/">Next: Integers and Floating-Point Numbers</a>
+        </footer>
+
       </article>
 
       <div class="col-12 col-md-3 col-xl-2 sidebar d-flex flex-column">

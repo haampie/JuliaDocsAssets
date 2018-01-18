@@ -59,7 +59,8 @@ body {
 
 code {
   background: rgba(0, 0, 0, .05);
-  padding: 0.1em 0.2em;
+  padding: 0 2px;
+  box-decoration-break: clone;
 }
 
 pre {
@@ -76,24 +77,35 @@ pre > code {
 }
 
 .article {
+  p, ul {
+    max-width: 42rem;
+  }
+
+  ul {
+    padding-left: $spacer;
+  }
+
+  padding-bottom: 2 * $spacer;
+
   & > p, & > h1, & > h2, & > ul {
     position: relative;
 
     @include media-breakpoint-up(md) {
-      &:hover > .anchor {
+      padding-left: map-get($spacers, 4);
+      &:hover .anchor {
         display: block;
       }
-    }
-
-    @include media-breakpoint-up(md) {
-      margin-right: 20%;
-      padding-left: map-get($spacers, 4);
     }
   }
 
   & > .highlight {
-    &:hover >.anchor {
-      display: block;
+    position: relative;
+    @include media-breakpoint-up(md) {
+      padding-left: map-get($spacers, 4);
+      padding-right: map-get($spacers, 4);
+      &:hover .anchor {
+        display: block;
+      }
     }
   }
 
@@ -105,9 +117,6 @@ pre > code {
 
 .highlight {
   padding: $spacer;
-  @include media-breakpoint-up(md) {
-    padding: map-get($spacers, 4);
-  }
   background: rgba(0, 0, 0, .05);
   margin-top: $spacer;
   margin-bottom: $spacer;
@@ -138,6 +147,11 @@ pre > code {
 .anchor {
   color: $gray-400;
   display: none;
+  position: absolute;
+  left: 0;
+  width: map-get($spacers, 4) - 0.25rem;
+  padding-right: 0.25rem;
+  text-align: right;
 
   &:hover {
     text-decoration: none;
@@ -145,16 +159,6 @@ pre > code {
 
   &::before {
     content: '§';
-  }
-
-  &.anchor-l {
-    position: absolute;
-    left: 0;
-  }
-
-  &.anchor-r {
-    position: absolute;
-    right: 2*$spacer;
   }
 }
 
@@ -199,7 +203,7 @@ pre > code {
 p, h1, h2 {
   &:target {
     animation-name: example;
-    animation-duration: 1000ms;
+    animation-duration: 1500ms;
   }
 }
 
@@ -218,4 +222,18 @@ p, h1, h2 {
 
 .docstring {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.06);
+}
+
+footer {
+  @include clearfix;
+  padding-bottom: $spacer;
+  .prev {
+    float: left;
+    @include media-breakpoint-up(md) {
+      margin-left: map-get($spacers, 4);
+    }
+  }
+  .next {
+    float: right;
+  }
 }
