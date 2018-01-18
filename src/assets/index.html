@@ -9,66 +9,21 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row flex-xl-nowrap">
-            <div class="col-12 col-md-3 col-xl-2 sidebar">
-              <nav>
-                <ul class="nav flex-column">
-                  <li class="nav-item"><a class="nav-link" href="#">Getting Started</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Variables</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Integers and Floating-Point Numbers</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Mathematical Operations and Elementary Functions</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Complex and Rational Numbers</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Strings</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Functions</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Control Flow</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Scope of Variables</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Types</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Methods</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Constructors</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Conversion and Promotion</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Interfaces</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Modules</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Documentation</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Metaprogramming</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Multi-dimensional Arrays</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Linear algebra</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Networking and Streams</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Parallel Computing</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Date and DateTime</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Interacting With Julia</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Running External Programs</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Calling C and Fortran Code</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Handling Operating System Variation</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Environment Variables</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Embedding Julia</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Packages</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Profiling</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Stack Traces</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Performance Tips</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Workflow Tips</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Style Guide</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Frequently Asked Questions</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Noteworthy Differences from other Languages</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Unicode Input</a></li>
-                </ul>
-              </nav>
-            </div>
-            <div class="order-2 d-none d-xl-block col-xl-2 sidebar">
-                Edit this page on Github.
-            </div>
-            <article class="article order-1 col-12 col-md-9 col-xl-8 py-md-3 pl-md-5">
-                <a href="#variables" class="anchor anchor-l"></a>
-                <h1 id="variables">Variables</h1>
-                
-                <a href="#p0" class="anchor anchor-l"></a>
-                <p id="p0">
-                  A variable, in Julia, is a name associated (or bound) to a value. It's useful when you want to store a value (that you obtained after some math, for example) for later use. For example:
-                </p>
+  <div class="row flex-xl-nowrap">
+    <article class="main article order-1 col-12 col-md-9 col-xl-8">
+      <h1 id="variables">
+        <a href="#variables" class="anchor anchor-l"></a>
+        Variables
+      </h1>
+      
+      <p id="p0">
+        <a href="#p0" class="anchor anchor-l"></a>
+        A variable, in Julia, is a name associated (or bound) to a value. It's useful when you want to store a value (that you obtained after some math, for example) for later use. For example:
+      </p>
 
-                <a href="#c0" class="anchor anchor-r"></a>
-                <div id="c0" class="highlight">
-                  <pre><code class="language-julia-repl"># Assign the value 10 to the variable x
+      <div id="c0" class="highlight">
+        <a href="#c0" class="anchor anchor-r"></a>
+        <pre><code class="language-julia-repl"># Assign the value 10 to the variable x
 julia&gt; x = 10
 10
 
@@ -83,15 +38,65 @@ julia&gt; x = 1 + 1
 # You can assign values of other types, like strings of text
 julia&gt; x = "Hello World!"
 "Hello World!"</code></pre>
-                </div>
-                <a href="#p1" class="anchor anchor-l"></a>
-                <p id="p1">
-                  Julia provides an extremely flexible system for naming variables. Variable names are case-sensitive, and have no semantic meaning (that is, the language will not treat variables differently based on their names).
-                </p>
+      </div>
 
-                <a href="#c1" class="anchor anchor-r"></a>
-                <div class="highlight" id="c1">
-                  <pre><code class="language-julia-repl">julia&gt; x = 1.0
+      <section class="card docstring">
+        <div class="card-body">
+          <p class="card-title h5"><a class="docstring-binding" id="docstring-1" href="#docstring-1"><code>Base.:*</code></a> <small class="text-muted docstring-category">Method</small></p>
+          <div class="highlight"><pre><code>*(x, y...)</code></pre></div>
+          <p>Multiplication operator. <code>x*y*z*...</code> calls this function with all arguments, i.e. <code>*(x, y, z, ...)</code>.</p>
+          <a class="card-link" href="#">source</a>
+        </div>
+      </section>
+
+      <section class="card docstring">
+        <div class="card-body">
+          <p class="card-title h5">
+            <a class="docstring-binding" id="docstring-2" href="#docstring-2"><code>Base.Rounding.setrounding</code></a> <small class="text-muted docstring-category">Method</small>
+          </p>
+          <div class="highlight"><pre><code class="language-none">setrounding(T, mode)</code></pre></div>
+          <p>Set the rounding mode of floating point type <code>T</code>, controlling the rounding of basic arithmetic functions (<a href="../math/#Base.:+"><code>+</code></a>, <a href="../math/#Base.:--Tuple{Any}"><code>-</code></a>, <a href="../strings/#Base.:*-Tuple{AbstractString,Vararg{Any,N} where N}"><code>*</code></a>, <a href="../math/#Base.:/"><code>/</code></a> and <a href="../math/#Base.sqrt"><code>sqrt</code></a>) and type conversion. Other numerical functions may give incorrect or invalid values when using rounding modes other than the default <code>RoundNearest</code>.</p>
+          <p>Note that this may affect other types, for instance changing the rounding mode of <a href="#Core.Float64"><code>Float64</code></a> will change the rounding mode of <a href="#Core.Float32"><code>Float32</code></a>. See <a href="../math/#Base.Rounding.RoundingMode"><code>RoundingMode</code></a> for available modes.</p>
+          <div class="alert julia-alert-warning">
+            This feature is still experimental, and may give unexpected or incorrect values.
+          </div>
+          <a class="card-link" target="_blank" href="#">source</a>
+        </div>
+      </section>
+
+      <section class="card docstring">
+        <div class="card-body">
+          <p class="card-title h5">
+            <a class="docstring-binding" id="docstring-3" href="#docstring-3"><code>Base.log</code></a> <small class="text-muted docstring-category">Method</small>
+          </p>
+          <div class="highlight"><pre><code class="language-none">log(b,x)</code></pre></div>
+          <p>Compute the base <code>b</code> logarithm of <code>x</code>. Throws <a href="../base/#Core.DomainError"><code>DomainError</code></a> for negative <a href="../numbers/#Core.Real"><code>Real</code></a> arguments.</p>
+          <div class="highlight"><pre><code class="language-julia-repl hljs"><span class="hljs-meta">julia&gt;</span><span class="julia"> log(<span class="hljs-number">4</span>,<span class="hljs-number">8</span>)
+      </span>1.5
+
+      <span class="hljs-meta">julia&gt;</span><span class="julia"> log(<span class="hljs-number">4</span>,<span class="hljs-number">2</span>)
+      </span>0.5</code></pre></div>
+          <div class="alert julia-alert-info">
+            <p class="alert-heading h5">Note</p>
+            <p>If <code>b</code> is a power of 2 or 10, <a href="#Base.log2"><code>log2</code></a> or <a href="#Base.log10"><code>log10</code></a> should be used, as these will typically be faster and more accurate. For example,</p>
+            <div class="highlight"><pre><code class="language-julia-repl hljs"><span class="hljs-meta">julia&gt;</span><span class="julia"> log(<span class="hljs-number">100</span>,<span class="hljs-number">1000000</span>)
+      </span>2.9999999999999996
+
+      <span class="hljs-meta">julia&gt;</span><span class="julia"> log10(<span class="hljs-number">1000000</span>)/<span class="hljs-number">2</span>
+      </span>3.0</code></pre></div>
+          </div>
+          <a class="card-link" target="_blank" href="#">source</a>
+        </div>
+      </section>
+
+      <p id="p1">
+        <a href="#p1" class="anchor anchor-l"></a>
+        Julia provides an extremely flexible system for naming variables. Variable names are case-sensitive, and have no semantic meaning (that is, the language will not treat variables differently based on their names).
+      </p>
+
+      <div class="highlight" id="c1">
+        <a href="#c1" class="anchor anchor-r"></a>
+        <pre><code class="language-julia-repl">julia&gt; x = 1.0
 1.0
 
 julia&gt; y = -3
@@ -105,31 +110,35 @@ julia&gt; customary_phrase = "Hello world!"
 
 julia&gt; UniversalDeclarationOfHumanRightsStart = "人人生而自由，在尊严和权利上一律平等。"
 "人人生而自由，在尊严和权利上一律平等。"</code></pre>
-                </div>
-                <a href="#p2" class="anchor anchor-l"></a>
-                <p id="p2">
-                  Unicode names (in UTF-8 encoding) are allowed:
-                </p>
+      </div>
 
-                <a href="#c2" class="anchor anchor-r"></a>
-                <div id="c2" class="highlight">
-                  <pre><code class="language-julia-repl">julia&gt; δ = 0.00001
+      <p id="p2">
+        <a href="#p2" class="anchor anchor-l"></a>
+        Unicode names (in UTF-8 encoding) are allowed:
+      </p>
+
+      <div id="c2" class="highlight">
+        <a href="#c2" class="anchor anchor-r"></a>
+        <pre><code class="language-julia-repl">julia&gt; δ = 0.00001
 1.0e-5
 
 julia&gt; 안녕하세요 = "Hello"
 "Hello"</code></pre>
-                </div>
-                <a href="#p3" class="anchor anchor-l"></a>
-                <p id="p3">
-                  In the Julia REPL and several other Julia editing environments, you can type many Unicode math symbols by typing the backslashed LaTeX symbol name followed by tab. For example, the variable name <code>δ</code> can be entered by typing <code>\delta</code>-<em>tab</em>, or even <code>α̂₂</code> by <code>\alpha</code>-<em>tab</em>-<code>\hat</code>- <em>tab</em>-<code>\_2</code>-<em>tab</em>. (If you find a symbol somewhere, e.g. in someone else's code, that you don't know how to type, the REPL help will tell you: just type <code>?</code> and then paste the symbol.)
-                </p>
-                <a href="#p4" class="anchor anchor-l"></a>
-                <p id="p4">
-                  Julia will even let you redefine built-in constants and functions if needed:
-                </p>
-                <a href="#c3" class="anchor anchor-r"></a>
-                <div id="c3" class="highlight">
-                  <pre><code class="language-julia-repl">julia&gt; pi
+      </div>
+
+      <p id="p3">
+        <a href="#p3" class="anchor anchor-l"></a>
+        In the Julia REPL and several other Julia editing environments, you can type many Unicode math symbols by typing the backslashed LaTeX symbol name followed by tab. For example, the variable name <code>δ</code> can be entered by typing <code>\delta</code>-<em>tab</em>, or even <code>α̂₂</code> by <code>\alpha</code>-<em>tab</em>-<code>\hat</code>- <em>tab</em>-<code>\_2</code>-<em>tab</em>. (If you find a symbol somewhere, e.g. in someone else's code, that you don't know how to type, the REPL help will tell you: just type <code>?</code> and then paste the symbol.)
+      </p>
+
+      <p id="p4">
+        <a href="#p4" class="anchor anchor-l"></a>
+        Julia will even let you redefine built-in constants and functions if needed:
+      </p>
+
+      <div id="c3" class="highlight">
+        <a href="#c3" class="anchor anchor-r"></a>
+        <pre><code class="language-julia-repl">julia&gt; pi
 π = 3.1415926535897...
 
 julia&gt; pi = 3
@@ -145,77 +154,133 @@ julia&gt; sqrt(100)
 julia&gt; sqrt = 4
 WARNING: imported binding for sqrt overwritten in module Main
 4</code></pre>
-                </div>
+      </div>
 
-                <a href="#p4" class="anchor anchor-l"></a>
-                <p id="p4">
-                  However, this is obviously not recommended to avoid potential confusion.
-                </p>
+      <p id="p4">
+        <a href="#p4" class="anchor anchor-l"></a>
+        However, this is obviously not recommended to avoid potential confusion.
+      </p>
 
-                <a href="#allowed-variable-names" class="anchor anchor-l"></a>
-                <h2 id="allowed-variable-names">Allowed Variable Names</h2>
-                
-                <a href="#p5" class="anchor anchor-l"></a>
-                <p id="p5">
-                  Variable names must begin with a letter (A-Z or a-z), underscore, or a subset of Unicode code points greater than 00A0; in particular, <a href="http://www.fileformat.info/info/unicode/category/index.htm">Unicode character categories</a> Lu/Ll/Lt/Lm/Lo/Nl (letters), Sc/So (currency and other symbols), and a few other letter-like characters (e.g. a subset of the Sm math symbols) are allowed. Subsequent characters may also include ! and digits (0-9 and other characters in categories Nd/No), as well as other Unicode code points: diacritics and other modifying marks (categories Mn/Mc/Me/Sk), some punctuation connectors (category Pc), primes, and a few other characters.
-                </p>
-                
-                <a href="#p6" class="anchor anchor-l"></a>
-                <p id="p6">
-                  Operators like <code>+</code> are also valid identifiers, but are parsed specially. In some contexts, operators can be used just like variables; for example <code>(+)</code> refers to the addition function, and <code>(+) = f</code> will reassign it. Most of the Unicode infix operators (in category Sm), such as <code>⊕</code>, are parsed as infix operators and are available for user-defined methods (e.g. you can use <code>const ⊗ = kron</code> to define <code>⊗</code> as an infix Kronecker product).
-                </p>
-                
-                <a href="#p7" class="anchor anchor-l"></a>
-                <p id="p7">
-                  The only explicitly disallowed names for variables are the names of built-in statements:
-                </p>
+      <h2 id="allowed-variable-names">
+        <a href="#allowed-variable-names" class="anchor anchor-l"></a>
+        Allowed Variable Names
+      </h2>
+      
+      <p id="p5">
+        <a href="#p5" class="anchor anchor-l"></a>
+        Variable names must begin with a letter (A-Z or a-z), underscore, or a subset of Unicode code points greater than 00A0; in particular, <a href="http://www.fileformat.info/info/unicode/category/index.htm">Unicode character categories</a> Lu/Ll/Lt/Lm/Lo/Nl (letters), Sc/So (currency and other symbols), and a few other letter-like characters (e.g. a subset of the Sm math symbols) are allowed. Subsequent characters may also include ! and digits (0-9 and other characters in categories Nd/No), as well as other Unicode code points: diacritics and other modifying marks (categories Mn/Mc/Me/Sk), some punctuation connectors (category Pc), primes, and a few other characters.
+      </p>
+      
+      <p id="p6">
+        <a href="#p6" class="anchor anchor-l"></a>
+        Operators like <code>+</code> are also valid identifiers, but are parsed specially. In some contexts, operators can be used just like variables; for example <code>(+)</code> refers to the addition function, and <code>(+) = f</code> will reassign it. Most of the Unicode infix operators (in category Sm), such as <code>⊕</code>, are parsed as infix operators and are available for user-defined methods (e.g. you can use <code>const ⊗ = kron</code> to define <code>⊗</code> as an infix Kronecker product).
+      </p>
+      
+      <p id="p7">
+        <a href="#p7" class="anchor anchor-l"></a>
+        The only explicitly disallowed names for variables are the names of built-in statements:
+      </p>
 
-                <a href="#c4" class="anchor anchor-r"></a>
-                <div id="c4" class="highlight">
-                  <pre><code class="language-julia-repl">julia&gt; else = false
+      <div id="c4" class="highlight">
+        <a href="#c4" class="anchor anchor-r"></a>
+        <pre><code class="language-julia-repl">julia&gt; else = false
 ERROR: syntax: unexpected "else"
 
 julia&gt; try = "No"
 ERROR: syntax: unexpected "="</code></pre>
-                </div>
-                <a href="#p8" class="anchor anchor-l"></a>
-                <p id="p8">
-                  Some Unicode characters are considered to be equivalent in identifiers. Different ways of entering Unicode combining characters (e.g., accents) are treated as equivalent (specifically, Julia identifiers are NFC-normalized). The Unicode characters <code>ɛ</code> (U+025B: Latin small letter open e) and <code>µ</code> (U+00B5: micro sign) are treated as equivalent to the corresponding Greek letters, because the former are easily accessible via some input methods.
-                </p>
+      </div>
 
-                <a href="#stylistic-conventions" class="anchor anchor-l"></a>
-                <h2>
-                  <a id="stylistic-conventions">
-                    Stylistic Conventions
-                  </a>
-                </h2>
+      <p id="p8">
+        <a href="#p8" class="anchor anchor-l"></a>
+        Some Unicode characters are considered to be equivalent in identifiers. Different ways of entering Unicode combining characters (e.g., accents) are treated as equivalent (specifically, Julia identifiers are NFC-normalized). The Unicode characters <code>ɛ</code> (U+025B: Latin small letter open e) and <code>µ</code> (U+00B5: micro sign) are treated as equivalent to the corresponding Greek letters, because the former are easily accessible via some input methods.
+      </p>
 
-                <a href="#p9" class="anchor anchor-l"></a>
-                <p id="p9">
-                  While Julia imposes few restrictions on valid names, it has become useful to adopt the following conventions:
-                </p>
-              
-                <ul>
-                    <li>
-                        <p>Names of variables are in lower case.</p>
-                    </li>
-                    <li>
-                        <p>Word separation can be indicated by underscores (<code>'_'</code>), but use of underscores is discouraged unless the name would be hard to read otherwise.</p>
-                    </li>
-                    <li>
-                        <p>Names of <code>Type</code>s and <code>Module</code>s begin with a capital letter and word separation is shown with upper camel case instead of underscores.</p>
-                    </li>
-                    <li>
-                        <p>Names of <code>function</code>s and <code>macro</code>s are in lower case, without underscores.</p>
-                    </li>
-                    <li>
-                        <p>Functions that write to their arguments have names that end in <code>!</code>. These are sometimes called "mutating" or "in-place" functions because they are intended to produce changes in their arguments after the function is called, not just return a value.</p>
-                    </li>
-                </ul>
-                <p>For more information about stylistic conventions, see the <a href="#">Style Guide</a>.</p>
-            </article>
-        </div>
+      <h2 id="stylistic-conventions">
+          <a href="#stylistic-conventions" class="anchor anchor-l"></a>
+          Stylistic Conventions
+      </h2>
+
+      <p id="p9">
+        <a href="#p9" class="anchor anchor-l"></a>
+        While Julia imposes few restrictions on valid names, it has become useful to adopt the following conventions:
+      </p>
+    
+      <ul>
+        <li>
+          <p>Names of variables are in lower case.</p>
+        </li>
+        <li>
+          <p>Word separation can be indicated by underscores (<code>'_'</code>), but use of underscores is discouraged unless the name would be hard to read otherwise.</p>
+        </li>
+        <li>
+          <p>Names of <code>Type</code>s and <code>Module</code>s begin with a capital letter and word separation is shown with upper camel case instead of underscores.</p>
+        </li>
+        <li>
+          <p>Names of <code>function</code>s and <code>macro</code>s are in lower case, without underscores.</p>
+        </li>
+        <li>
+          <p>Functions that write to their arguments have names that end in <code>!</code>. These are sometimes called "mutating" or "in-place" functions because they are intended to produce changes in their arguments after the function is called, not just return a value.</p>
+        </li>
+      </ul>
+      <p>For more information about stylistic conventions, see the <a href="#">Style Guide</a>.</p>
+    </article>
+
+    <div class="col-12 col-md-3 col-xl-2 sidebar d-flex flex-column">
+      <div class="sidebar-header">
+        <img src="logo.svg" alt="Julia Language" width="144px" />
+        <h1 class="h6">The Julia Language</h1>
+      </div>
+      <nav>
+        <ul class="nav flex-column julia-nav">
+          <li class="nav-item"><a class="nav-link" href="#">Getting Started</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Variables</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Integers and Floating-Point Numbers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Mathematical Operations and Elementary Functions</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Complex and Rational Numbers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Strings</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Functions</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Control Flow</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Scope of Variables</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Types</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Methods</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Constructors</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Conversion and Promotion</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Interfaces</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Modules</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Documentation</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Metaprogramming</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Multi-dimensional Arrays</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Linear algebra</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Networking and Streams</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Parallel Computing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Date and DateTime</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Interacting With Julia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Running External Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Calling C and Fortran Code</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Handling Operating System Variation</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Environment Variables</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Embedding Julia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Packages</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Profiling</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Stack Traces</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Performance Tips</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Workflow Tips</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Style Guide</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Frequently Asked Questions</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Noteworthy Differences from other Languages</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Unicode Input</a></li>
+        </ul>
+      </nav>
     </div>
+    <div class="order-2 d-none d-xl-block col-xl-2 sidebar">
+      <nav class="page-toc">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link" href="#allowed-variable-names">Allowed Variable Names</a></li>
+          <li class="nav-item"><a class="nav-link" href="#stylistic-conventions">Stylistic Conventions</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 </body>
 
 </html>
