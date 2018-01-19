@@ -11,7 +11,7 @@
 <body>
   <div class="container-fluid">
     <div class="row flex-xl-nowrap">
-      <article class="main article order-1 col-12 col-md-9 col-xl-8">
+      <article class="main article order-1 col-12 col-md-9 col-xl-7">
 
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
@@ -361,50 +361,134 @@ ERROR: syntax: unexpected "="</code></pre>
 
       </article>
 
-      <div class="col-12 col-md-3 col-xl-2 sidebar d-flex flex-column">
+      <div class="col-12 col-md-3 col-xl-3 sidebar d-flex flex-column">
         <div class="sidebar-header">
           <img src="logo.svg" alt="Julia Language" width="144px" />
           <h1 class="h6">The Julia Language</h1>
+          <div class="form-group">
+            <input type="search" class="form-control" placeholder="Search...">
+          </div>
         </div>
         <nav>
-          <ul class="nav flex-column julia-nav">
-            <li class="nav-item"><a class="nav-link" href="#">Getting Started</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Variables</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Integers and Floating-Point Numbers</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Mathematical Operations and Elementary Functions</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Complex and Rational Numbers</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Strings</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Functions</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Control Flow</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Scope of Variables</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Types</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Methods</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Constructors</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Conversion and Promotion</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Interfaces</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Modules</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Documentation</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Metaprogramming</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Multi-dimensional Arrays</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Linear algebra</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Networking and Streams</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Parallel Computing</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Date and DateTime</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Interacting With Julia</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Running External Programs</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Calling C and Fortran Code</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Handling Operating System Variation</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Environment Variables</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Embedding Julia</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Packages</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Profiling</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Stack Traces</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Performance Tips</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Workflow Tips</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Style Guide</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Frequently Asked Questions</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Noteworthy Differences from other Languages</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Unicode Input</a></li>
+          <ul class="nav flex-column">
+            <li class="current">
+              <a class="nav-link" href="">Home</a>
+              <ul class="nav flex-column">
+                <li><a class="nav-link" href="#">Manual</a></li>
+                <li><a class="nav-link" href="#">Standard Library</a></li>
+                <li><a class="nav-link" href="#">Developer Documentation</a></li>
+              </ul>
+            </li>
+            <li>
+              <span class="nav-link">Manual</span>
+              <ul class="nav flex-column">
+                <li><a class="nav-link" href="#">Introduction</a></li>
+                <li><a class="nav-link" href="#">Getting Started</a></li>
+                <li><a class="nav-link active" href="#">Variables</a></li>
+                <li><a class="nav-link" href="#">Integers and Floating-Point Numbers</a></li>
+                <li><a class="nav-link" href="#">Mathematical Operations and Elementary Functions</a></li>
+                <li><a class="nav-link" href="#">Complex and Rational Numbers</a></li>
+                <li><a class="nav-link" href="#">Strings</a></li>
+                <li><a class="nav-link" href="#">Functions</a></li>
+                <li><a class="nav-link" href="#">Control Flow</a></li>
+                <li><a class="nav-link" href="#">Scope of Variables</a></li>
+                <li><a class="nav-link" href="#">Types</a></li>
+                <li><a class="nav-link" href="#">Methods</a></li>
+                <li><a class="nav-link" href="#">Constructors</a></li>
+                <li><a class="nav-link" href="#">Conversion and Promotion</a></li>
+                <li><a class="nav-link" href="#">Interfaces</a></li>
+                <li><a class="nav-link" href="#">Modules</a></li>
+                <li><a class="nav-link" href="#">Documentation</a></li>
+                <li><a class="nav-link" href="#">Metaprogramming</a></li>
+                <li><a class="nav-link" href="#">Multi-dimensional Arrays</a></li>
+                <li><a class="nav-link" href="#">Linear algebra</a></li>
+                <li><a class="nav-link" href="#">Networking and Streams</a></li>
+                <li><a class="nav-link" href="#">Parallel Computing</a></li>
+                <li><a class="nav-link" href="#">Date and DateTime</a></li>
+                <li><a class="nav-link" href="#">Interacting With Julia</a></li>
+                <li><a class="nav-link" href="#">Running External Programs</a></li>
+                <li><a class="nav-link" href="#">Calling C and Fortran Code</a></li>
+                <li><a class="nav-link" href="#">Handling Operating System Variation</a></li>
+                <li><a class="nav-link" href="#">Environment Variables</a></li>
+                <li><a class="nav-link" href="#">Embedding Julia</a></li>
+                <li><a class="nav-link" href="#">Packages</a></li>
+                <li><a class="nav-link" href="#">Profiling</a></li>
+                <li><a class="nav-link" href="#">Stack Traces</a></li>
+                <li><a class="nav-link" href="#">Performance Tips</a></li>
+                <li><a class="nav-link" href="#">Workflow Tips</a></li>
+                <li><a class="nav-link" href="#">Style Guide</a></li>
+                <li><a class="nav-link" href="#">Frequently Asked Questions</a></li>
+                <li><a class="nav-link" href="#">Noteworthy Differences from other Languages</a></li>
+                <li><a class="nav-link" href="#">Unicode Input</a></li>
+              </ul>
+            </li>
+            <li><span class="nav-link">Standard Library</span>
+              <ul class="nav flex-column">
+                <li><a class="nav-link" href="#">Essentials</a></li>
+                <li><a class="nav-link" href="#">Collections and Data Structures</a></li>
+                <li><a class="nav-link" href="#">Mathematics</a></li>
+                <li><a class="nav-link" href="#">Numbers</a></li>
+                <li><a class="nav-link" href="#">Strings</a></li>
+                <li><a class="nav-link" href="#">Arrays</a></li>
+                <li><a class="nav-link" href="#">Tasks and Parallel Computing</a></li>
+                <li><a class="nav-link" href="#">Linear Algebra</a></li>
+                <li><a class="nav-link" href="#">Constants</a></li>
+                <li><a class="nav-link" href="#">Filesystem</a></li>
+                <li><a class="nav-link" href="#">I/O and Network</a></li>
+                <li><a class="nav-link" href="#">Punctuation</a></li>
+                <li><a class="nav-link" href="#">Sorting and Related Functions</a></li>
+                <li><a class="nav-link" href="#">Package Manager Functions</a></li>
+                <li><a class="nav-link" href="#">Dates and Time</a></li>
+                <li><a class="nav-link" href="#">Iteration utilities</a></li>
+                <li><a class="nav-link" href="#">Unit Testing</a></li>
+                <li><a class="nav-link" href="#">C Interface</a></li>
+                <li><a class="nav-link" href="#">C Standard Library</a></li>
+                <li><a class="nav-link" href="#">Dynamic Linker</a></li>
+                <li><a class="nav-link" href="#">Profiling</a></li>
+                <li><a class="nav-link" href="#">StackTraces</a></li>
+                <li><a class="nav-link" href="#">SIMD Support</a></li>
+              </ul>
+            </li>
+            <li>
+              <span class="nav-link">Developer Documentation</span>
+              <ul class="nav flex-column">
+                <li><a class="nav-link" href="devdocs/reflection/">Reflection and introspection</a></li>
+                <li>
+                  <span class="nav-link">Documentation of Julia's Internals</span>
+                  <ul class="nav flex-column">
+                    <li><a class="nav-link" href="#">Initialization of the Julia runtime</a></li>
+                    <li><a class="nav-link" href="#">Julia ASTs</a></li>
+                    <li><a class="nav-link" href="#">More about types</a></li>
+                    <li><a class="nav-link" href="#">Memory layout of Julia Objects</a></li>
+                    <li><a class="nav-link" href="#">Eval of Julia code</a></li>
+                    <li><a class="nav-link" href="#">Calling Conventions</a></li>
+                    <li><a class="nav-link" href="#">High-level Overview of the Native-Code Generation Process</a></li>
+                    <li><a class="nav-link" href="#">Julia Functions</a></li>
+                    <li><a class="nav-link" href="#">Base.Cartesian</a></li>
+                    <li><a class="nav-link" href="#">Talking to the compiler (the <code>:meta</code> mechanism)</a></li>
+                    <li><a class="nav-link" href="#">SubArrays</a></li>
+                    <li><a class="nav-link" href="#">System Image Building</a></li>
+                    <li><a class="nav-link" href="#">Working with LLVM</a></li>
+                    <li><a class="nav-link" href="#">printf() and stdio in the Julia runtime</a></li>
+                    <li><a class="nav-link" href="#">Bounds checking</a></li>
+                    <li><a class="nav-link" href="#">Proper maintenance and care of multi-threading locks</a></li>
+                    <li><a class="nav-link" href="#">Arrays with custom indices</a></li>
+                    <li><a class="nav-link" href="#">Base.LibGit2</a></li>
+                    <li><a class="nav-link" href="#">Module loading</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="nav-link">Developing/debugging Julia's C code</span>
+                  <ul class="nav flex-column">
+                    <li><a class="nav-link" href="#">Reporting and analyzing crashes (segfaults)</a></li>
+                    <li><a class="nav-link" href="#">gdb debugging tips</a></li>
+                    <li><a class="nav-link" href="#">Using Valgrind with Julia</a></li>
+                    <li><a class="nav-link" href="#">Sanitizer support</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </div>

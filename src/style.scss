@@ -142,6 +142,9 @@ pre > code {
 
 .sidebar-header {
   text-align: center;
+  border-bottom: $border-width solid $border-color;
+  padding-bottom: $spacer;
+  margin-bottom: $spacer;
 }
 
 .anchor {
@@ -236,4 +239,14 @@ footer {
   .next {
     float: right;
   }
+}
+
+.nav ul {
+  margin-left: map-get($spacers, 2);
+  font-size: 0.9em;
+}
+
+.nav-link.active {
+  color: $component-active-color;
+  background: $component-active-bg;
 }
