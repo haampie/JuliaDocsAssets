@@ -64,7 +64,7 @@ julia&gt; x = "Hello World!"
             <p class="card-title h5">
               <a class="docstring-binding" id="docstring-2" href="#docstring-2"><code>Base.Rounding.setrounding</code></a> <small class="text-muted docstring-category">Method</small>
             </p>
-            <div class="highlight"><pre><code class="language-none">setrounding(T, mode)</code></pre></div>
+            <div class="highlight"><pre><code class="language-julia-repl hljs">setrounding(T, mode)</code></pre></div>
             <p>Set the rounding mode of floating point type <code>T</code>, controlling the rounding of basic arithmetic functions (<a href="../math/#Base.:+"><code>+</code></a>, <a href="../math/#Base.:--Tuple{Any}"><code>-</code></a>, <a href="../strings/#Base.:*-Tuple{AbstractString,Vararg{Any,N} where N}"><code>*</code></a>, <a href="../math/#Base.:/"><code>/</code></a> and <a href="../math/#Base.sqrt"><code>sqrt</code></a>) and type conversion. Other numerical functions may give incorrect or invalid values when using rounding modes other than the default <code>RoundNearest</code>.</p>
             <p>Note that this may affect other types, for instance changing the rounding mode of <a href="#Core.Float64"><code>Float64</code></a> will change the rounding mode of <a href="#Core.Float32"><code>Float32</code></a>. See <a href="../math/#Base.Rounding.RoundingMode"><code>RoundingMode</code></a> for available modes.</p>
             <div class="alert julia-alert-warning">
@@ -79,7 +79,7 @@ julia&gt; x = "Hello World!"
             <p class="card-title h5">
               <a class="docstring-binding" id="docstring-3" href="#docstring-3"><code>Base.log</code></a> <small class="text-muted docstring-category">Method</small>
             </p>
-            <div class="highlight"><pre><code class="language-none">log(b,x)</code></pre></div>
+            <div class="highlight"><pre><code class="language-julia-repl hljs">log(b,x)</code></pre></div>
             <p>Compute the base <code>b</code> logarithm of <code>x</code>. Throws <a href="../base/#Core.DomainError"><code>DomainError</code></a> for negative <a href="../numbers/#Core.Real"><code>Real</code></a> arguments.</p>
             <div class="highlight"><pre><code class="language-julia-repl hljs"><span class="hljs-meta">julia&gt;</span><span class="julia"> log(<span class="hljs-number">4</span>,<span class="hljs-number">8</span>)
         </span>1.5
