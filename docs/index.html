@@ -23,7 +23,7 @@
           <a href="#variables" class="anchor"></a>
           Variables
         </h1>
-        
+
         <p id="p0">
           <a href="#p0" class="anchor"></a>
           A variable, in Julia, is a name associated (or bound) to a value. It's useful when you want to store a value (that you obtained after some math, for example) for later use. For example:
@@ -324,13 +324,23 @@ ERROR: syntax: unexpected "="</code></pre>
           Some Unicode characters are considered to be equivalent in identifiers. Different ways of entering Unicode combining characters (e.g., accents) are treated as equivalent (specifically, Julia identifiers are NFC-normalized). The Unicode characters <code>ɛ</code> (U+025B: Latin small letter open e) and <code>µ</code> (U+00B5: micro sign) are treated as equivalent to the corresponding Greek letters, because the former are easily accessible via some input methods.
         </p>
 
+        <h2 id="math-examples">
+          <a href="#math-examples" class="anchor"></a>
+          Math Examples
+        </h2>
+
+        <p id="p9">
+          <a href="#p9" class="anchor"></a>
+          Some math <span class="math">x^2</span> here and <span class="math">\sqrt{2}</span> there. What about a tiny fraction <span class="math">\tfrac{1}{2}</span>, does that work well? Let's make the paragraph a bit longer. What about some block of maths?! <span class="math math-block">x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}</span> That should work just fine!
+        </p>
+
         <h2 id="stylistic-conventions">
             <a href="#stylistic-conventions" class="anchor"></a>
             Stylistic Conventions
         </h2>
 
-        <p id="p9">
-          <a href="#p9" class="anchor"></a>
+        <p id="p10">
+          <a href="#p10" class="anchor"></a>
           While Julia imposes few restrictions on valid names, it has become useful to adopt the following conventions:
         </p>
       
@@ -369,7 +379,7 @@ ERROR: syntax: unexpected "="</code></pre>
             <input type="search" class="form-control" placeholder="Search...">
           </div>
         </div>
-        <nav>
+        <nav class="full-toc">
           <ul class="nav flex-column">
             <li class="current">
               <a class="nav-link" href="">Home</a>
@@ -496,12 +506,15 @@ ERROR: syntax: unexpected "="</code></pre>
         <nav class="page-toc">
           <ul class="nav flex-column">
             <li class="nav-item"><a class="nav-link" href="#allowed-variable-names">Allowed Variable Names</a></li>
+            <li class="nav-item"><a class="nav-link" href="#math-examples">Math Examples</a></li>
             <li class="nav-item"><a class="nav-link" href="#stylistic-conventions">Stylistic Conventions</a></li>
           </ul>
         </nav>
       </div>
     </div>
   </div>
+  <script src="app.js"></script>
+  <script>require('src/app.js');</script>
 </body>
 
 </html>

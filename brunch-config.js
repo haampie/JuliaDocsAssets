@@ -1,4 +1,6 @@
 module.exports = {
+    sourceMaps: false,
+    optimize: true,
     files: {
         javascripts: {
             joinTo: 'app.js'
@@ -14,23 +16,13 @@ module.exports = {
     plugins: {
         sass: {
             options: {
-                includePaths: ['node_modules/bootstrap/scss']
+                includePaths: ['node_modules/bootstrap/scss', 'node_modules/katex/dist']
             }
         },
-        uglify: {
-            mangle: false,
-            compress: {
-                global_defs: {
-                    DEBUG: false
-                }
-            }
-        }
-    },
-    overrides: {
-        production: {
-            optimize: true,
-            sourceMaps: false,
-            plugins: { autoReload: { enabled: false } }
+        copycat: {
+            fonts: ["node_modules/katex/dist/fonts"],
+            verbose: false,
+            onlyChanged: true
         }
     }
 }

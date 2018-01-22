@@ -1,5 +1,6 @@
 @import "functions";
 @import "variables";
+@import "katex.min";
 
 $code-color: $gray-900;
 $font-size-base: 1rem;
@@ -60,7 +61,6 @@ body {
 code {
   background: rgba(0, 0, 0, .05);
   padding: 0 2px;
-  box-decoration-break: clone;
 }
 
 pre {
@@ -241,12 +241,28 @@ footer {
   }
 }
 
-.nav ul {
-  margin-left: map-get($spacers, 2);
-  font-size: 0.9em;
-}
+.full-toc {
+  ul .nav-link {
+    padding-left: 0;
+    color: $body-color;
 
-.nav-link.active {
-  color: $component-active-color;
-  background: $component-active-bg;
+    &:hover {
+      background-color: #4e4a4a;
+      color: #FFF;
+    }
+  }
+
+  ul ul .nav-link {
+    padding-left: map-get($spacers, 2);
+    font-size: 0.9rem;
+  }
+  ul ul ul .nav-link {
+    padding-left: 2*map-get($spacers, 2);
+    font-size: 0.8rem;
+  }
+
+  .nav-link.active {
+    background-color: $primary;
+    color: $white;
+  }
 }
