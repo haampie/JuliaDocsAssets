@@ -1,6 +1,7 @@
 @import "functions";
 @import "variables";
 @import "katex.min";
+@import "atom-one-dark";
 
 $code-color: $gray-900;
 $font-size-base: 1rem;
@@ -67,11 +68,6 @@ pre {
   margin-bottom: 0;
 }
 
-pre > code {
-  background: transparent;
-  padding: 0;
-}
-
 .main {
   padding-top: 2rem;
 }
@@ -98,7 +94,7 @@ pre > code {
     }
   }
 
-  & > .highlight {
+  & > .highlight > pre > code {
     position: relative;
     @include media-breakpoint-up(md) {
       padding-left: map-get($spacers, 4);
@@ -115,11 +111,13 @@ pre > code {
   }
 }
 
-.highlight {
-  padding: $spacer;
-  background: rgba(0, 0, 0, .05);
+pre {
   margin-top: $spacer;
   margin-bottom: $spacer;
+}
+
+.hljs {
+  padding: $spacer;
 }
 
 .sidebar {
@@ -165,6 +163,12 @@ pre > code {
   }
 }
 
+.hljs .anchor {
+  &, &:hover, &:active {
+    color: inherit;
+  }
+}
+
 .path {
   @include list-unstyled;
   font-size: $small-font-size;
@@ -182,12 +186,8 @@ pre > code {
 }
 
 .alert {
-  code, .highlight {
+  :not(pre) > code {
     background-color: rgba(255, 255, 255, 0.5);
-  }
-
-  pre > code {
-    background-color: transparent;
   }
 }
 

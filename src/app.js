@@ -1,11 +1,14 @@
-const katex = require('katex');
+const katex = require('katex')
+const hljs = require('highlight.js/lib/highlight')
+hljs.registerLanguage('julia', require('highlight.js/lib/languages/julia'));
+hljs.registerLanguage('julia-repl', require('highlight.js/lib/languages/julia-repl'));
 
-var elements = document.getElementsByClassName('math');
-
-for (var idx = 0; idx < elements.length; idx++) {
-  var element = elements[idx];
+for (let element of document.getElementsByClassName('math')) {
   katex.render(element.textContent, element, {
     displayMode: element.classList.contains('math-block')
   });
 }
 
+for (let element of document.getElementsByClassName('hljs')) {
+  hljs.highlightBlock(element);
+}

@@ -9,8 +9,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-brunch": "^6.1.1",
+    "babel-preset-env": "^1.6.1",
     "brunch": "^2.10.12",
     "copycat-brunch": "^1.1.0",
+    "highlight.js": "^9.12.0",
     "sass-brunch": "^2.10.4",
     "uglify-js-brunch": "^2.10.0"
   },

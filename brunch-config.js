@@ -14,9 +14,16 @@ module.exports = {
       watched: ['src']
     },
     plugins: {
+        babel: {
+            presets: ['env']
+        },
         sass: {
             options: {
-                includePaths: ['node_modules/bootstrap/scss', 'node_modules/katex/dist']
+                includePaths: [
+                    'node_modules/bootstrap/scss',
+                    'node_modules/katex/dist',
+                    'node_modules/highlight.js/styles'
+                ]
             }
         },
         copycat: {
