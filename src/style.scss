@@ -42,8 +42,8 @@ h1 {
 // @import "navbar";
 @import "card";
 @import "breadcrumb";
-// @import "pagination";
-// @import "badge";
+@import "pagination";
+@import "badge";
 // @import "jumbotron";
 @import "alert";
 // @import "progress";
@@ -75,6 +75,8 @@ pre {
 }
 
 .article {
+  padding-bottom: 2 * $spacer;
+
   p, ul {
     max-width: 42rem;
   }
@@ -82,8 +84,6 @@ pre {
   ul {
     padding-left: $spacer;
   }
-
-  padding-bottom: 2 * $spacer;
 
   & > p,
   & > h1,
@@ -102,8 +102,10 @@ pre {
   & > ul > li {
     padding-left: 1.5rem;
 
-    &:hover::before {
-      display: none;
+    @include media-breakpoint-up(md) {
+      &:hover::before {
+        display: none;
+      }
     }
 
     &::before {
